@@ -6,6 +6,10 @@
     <title>CSS Animation</title>
 
     <style>
+        /**********************/
+        /*      GENERAL       */
+        /**********************/
+        
         *,
         body {
             margin: 0;
@@ -22,10 +26,70 @@
         section h2 {
             font-size: 2.2rem;
             text-align: center;
-            background: linear-gradient(45deg, rgba(254, 204, 177, 1) 0%, rgba(234, 85, 7, 1) 12%, rgba(237, 153, 111, 1) 51%, rgba(234, 85, 7, 1) 86%, rgba(251, 149, 94, 1) 100%);
+            padding: 10px 0;
+            color: #fff;
+            font-weight: bold;
+            position: relative;
+            border: 3px solid #fb8a4d;
+            background: linear-gradient(to right, #feccb1 0%, #ed692d 30%, #ef641f 50%, #ed692d 70%, #fb955e 100%);
         }
         
-        .section-color-change {}
+        section h2:after,
+        section h2:before {
+            top: 100%;
+            left: 50%;
+            content: " ";
+            position: absolute;
+            height: 0;
+            width: 0;
+            border: solid transparent;
+        }
+        
+        section h2:after {
+            border-color: rgba(194, 225, 245, 0);
+            border-width: 30px;
+            margin-left: -30px;
+            border-top-color: #ef641f;
+        }
+        
+        section h2:before {
+            border-color: rgba(194, 225, 245, 0);
+            border-width: 33px;
+            margin-left: -33px;
+            border-top-color: #fb8a4d;
+        }
+        /**********************/
+        /*      COLOR CHANGE       */
+        /**********************/
+        
+        .section-color-change .element {
+            width: 80%;
+            height: 300px;
+            margin: 50px auto 10px auto;
+            border-radius: 5px;
+            animation: pulse 5s linear infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                background-color: #7688A9;
+            }
+            20% {
+                background-color: #4D648D;
+            }
+            40% {
+                background-color: #152C55;
+            }
+            60% {
+                background-color: #152C55;
+            }
+            80% {
+                background-color: #4D648D;
+            }
+            100% {
+                background-color: #7688A9;
+            }
+        }
     </style>
 </head>
 
