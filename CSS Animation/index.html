@@ -20,7 +20,7 @@
         }
         
         section {
-            margin: 10px 0;
+            margin: 30px 0;
         }
         
         section h2 {
@@ -90,12 +90,46 @@
                 background-color: #7688A9;
             }
         }
+        /**********************/
+        /*      COLOR CHANGE  */
+        /**********************/
+        
+        .section-stretch .element {
+            width: 100px;
+            height: 100px;
+            margin: 70px auto 10px auto;
+            border-radius: 5px;
+            background-color: #4D648D;
+            animation: stretch 3s linear infinite;
+        }
+        
+        @keyframes stretch {
+            0%,
+            100% {
+                transform: scale(0.5);
+            }
+            25% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.5);
+            }
+            75% {
+                transform: scale(1);
+            }
+        }
     </style>
 </head>
 
 <body>
     <section class="section-color-change">
-        <h2 class="title">Color Change</h2>
+        <h2 class="title">1. Color Change</h2>
+        <div class="element">
+
+        </div>
+    </section>
+    <section class="section-stretch">
+        <h2 class="title">2. Stretch</h2>
         <div class="element">
 
         </div>
