@@ -156,6 +156,28 @@
                 transform: translate(0px, 0);
             }
         }
+        /**********************/
+        /* Multiple animation  */
+        /**********************/
+        
+        .section-rotating-circle .element {
+            width: 30px;
+            height: 30px;
+            margin: 70px auto 10px auto;
+            border-radius: 50%;
+            background-color: #4D648D;
+            animation: changeColor 3s linear infinite, rotate 3s linear infinite;
+            /* Dont need to re create changeColor */
+        }
+        
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg) translateX(40px) rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg) translateX(40px) rotate(-360deg);
+            }
+        }
     </style>
 </head>
 
@@ -174,9 +196,16 @@
     </section>
 
     <section class="section-multiple-animation">
-        <h2 class="title">2. Use Multiple Animations</h2>
+        <h2 class="title">3. Use Multiple Animations</h2>
         <div class="element">
 
+        </div>
+    </section>
+
+    <section class="section-rotating-circle">
+        <h2 class="title">4. Circle Using Multiple Animations</h2>
+        <div class="element">
+            h
         </div>
     </section>
 </body>
