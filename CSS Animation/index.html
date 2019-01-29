@@ -118,6 +118,44 @@
                 transform: scale(1);
             }
         }
+        /**********************/
+        /* Multiple animation  */
+        /**********************/
+        
+        .section-multiple-animation .element {
+            width: 100px;
+            height: 100px;
+            margin: 70px auto 10px auto;
+            border-radius: 50%;
+            background-color: #4D648D;
+            animation: changeColor 3s linear infinite, translate 3s linear infinite;
+        }
+        
+        @keyframes changeColor {
+            0%,
+            100% {
+                background-color: green;
+            }
+            50% {
+                background-color: red;
+            }
+        }
+        
+        @keyframes translate {
+            0%,
+            100% {
+                transform: translate(-80px, 0);
+            }
+            25% {
+                transform: translate(0px, 0);
+            }
+            50% {
+                transform: translate(80px, 0);
+            }
+            75% {
+                transform: translate(0px, 0);
+            }
+        }
     </style>
 </head>
 
@@ -130,6 +168,13 @@
     </section>
     <section class="section-stretch">
         <h2 class="title">2. Stretch</h2>
+        <div class="element">
+
+        </div>
+    </section>
+
+    <section class="section-multiple-animation">
+        <h2 class="title">2. Use Multiple Animations</h2>
         <div class="element">
 
         </div>
